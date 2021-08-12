@@ -16,6 +16,9 @@ customer user stories:
 - a user starts with 0 balance
 
 - a user can deposit more money to his account by uploading a picture of a check and entering the amount of the check. if the check is approved by an admin, the money is added to the bank account.
+- /**
+- * The picture can be of anything, you don't need to parse it or validate it in any way
+- */
 
 
 - to buy something, the user enters the amount and description; a user can only buy something if she has enough money to cover the cost.
