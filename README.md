@@ -41,4 +41,4 @@ Simplifying Assumptions
 * an admin can’t be also a customer
 
 
-Submit app url and repo url to assaf@turnoverbnb.com
+Submit app url and repo url to augusto@turnoverbnb.com
