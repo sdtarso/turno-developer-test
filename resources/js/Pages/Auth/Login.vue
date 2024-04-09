@@ -36,25 +36,21 @@ const submit = () => {
     </div>
 
     <form @submit.prevent="submit">
-      <div>
-        <InputLabel for="email" value="Email" />
-
+      <div class="px-4 mb-6">
         <TextInput
           id="email"
           type="email"
-          class="mt-1 block w-full"
+          class="block w-full"
           v-model="form.email"
           required
           autofocus
-          autocomplete="username"
+          autocomplete="email"
+          placeholder="email"
         />
-
         <InputError class="mt-2" :message="form.errors.email" />
       </div>
 
-      <div class="mt-4">
-        <InputLabel for="password" value="Password" />
-
+      <div class="px-4 mb-14">
         <TextInput
           id="password"
           type="password"
@@ -62,35 +58,25 @@ const submit = () => {
           v-model="form.password"
           required
           autocomplete="current-password"
+          placeholder="password"
         />
 
         <InputError class="mt-2" :message="form.errors.password" />
       </div>
 
-      <div class="block mt-4">
-        <label class="flex items-center">
-          <!-- eslint-disable-next-line -->
-          <Checkbox name="remember" v-model:checked="form.remember" />
-          <span class="ms-2 text-sm text-gray-600">Remember me</span>
-        </label>
-      </div>
-
-      <div class="flex items-center justify-end mt-4">
-        <Link
-          v-if="canResetPassword"
-          :href="route('password.request')"
-          class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          Forgot your password?
-        </Link>
-
+      <div class="mb-16">
         <PrimaryButton
-          class="ms-4"
           :class="{ 'opacity-25': form.processing }"
           :disabled="form.processing"
+          block
         >
-          Log in
+          SIGN IN
         </PrimaryButton>
+      </div>
+      <div class="text-center">
+        <Link class="text-primary font-medium" :href="route('register')">
+          <small>Doesn't have an account?</small>
+        </Link>
       </div>
     </form>
   </GuestLayout>

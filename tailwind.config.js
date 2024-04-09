@@ -1,4 +1,3 @@
-import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 
 /** @type {import('tailwindcss').Config} */
@@ -22,9 +21,6 @@ export default {
           400: "#bde0fe",
           DEFAULT: "#2799fb",
         },
-      },
-      fontFamily: {
-        sans: ["Figtree", ...defaultTheme.fontFamily.sans],
       },
     },
   },
