@@ -16,7 +16,7 @@ npm run dev
 
 ## TODO
 
-- [ ] Update styles to match wireframe
+- [X] Update styles to match wireframe
 - [ ] Create pages
 - [ ] Create Drawer
 - [ ] Implement purchase create
@@ -27,11 +27,11 @@ npm run dev
 
 General
 
-- [ ] Sign Up
+- [X] Sign Up
 
 Customer:
 
-- [ ] Home (Balance)
+- [X] Home (Balance)
 - [ ] Menu
 - [ ] Expenses
 - [ ] Add Purchase

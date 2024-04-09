@@ -1,24 +1,26 @@
 <script setup lang="ts">
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head } from "@inertiajs/vue3";
+import AccountBalance from "@/Components/AccountBalance.vue";
+import EntrySummary from "@/Components/EntrySummary.vue";
+import Transactions from "@/Components/Transactions.vue";
 </script>
 
 <template>
-  <Head title="Dashboard" />
+  <Head title="Balance" />
 
   <AuthenticatedLayout>
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Dashboard
-      </h2>
+      <h2 class="text-white text-center text-xl mb-6">BNB Bank</h2>
+      <AccountBalance />
     </template>
-
-    <div class="py-12">
-      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-          <div class="p-6 text-gray-900">You're logged in!</div>
-        </div>
-      </div>
-    </div>
+    <EntrySummary label="Incomes" action="DEPOSIT A CHECK" :value="7100" />
+    <EntrySummary
+      class="bg-light mb-6"
+      label="Expenses"
+      action="PURCHASE"
+      :value="780"
+    />
+    <Transactions class="mb-8" />
   </AuthenticatedLayout>
 </template>

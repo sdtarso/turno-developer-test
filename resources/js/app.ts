@@ -5,6 +5,10 @@ import { createApp, h, DefineComponent } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy";
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import { CoPlus, FaChevronDown, FaBars } from "oh-vue-icons/icons";
+
+addIcons(CoPlus, FaChevronDown, FaBars);
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 
@@ -19,6 +23,7 @@ createInertiaApp({
     createApp({ render: () => h(App, props) })
       .use(plugin)
       .use(ZiggyVue)
+      .component("VIcon", OhVueIcon)
       .mount(el);
   },
   progress: {

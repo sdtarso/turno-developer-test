@@ -22,6 +22,9 @@ export default {
           DEFAULT: "#2799fb",
         },
       },
+      gridTemplateColumns: {
+        header: "24px 1fr 24px"
+      }
     },
   },
 
