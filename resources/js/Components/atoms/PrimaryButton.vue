@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { reactive } from "vue";
-
 const { block } = defineProps<{ block?: boolean }>();
 </script>
 

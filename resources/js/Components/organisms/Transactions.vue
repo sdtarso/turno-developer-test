@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import Container from "@/Components/Container.vue";
-import TransationItem, { ITransactionItem } from "./TransactionItem.vue";
+import Container from "@/Components/atoms/Container.vue";
+import TransationItem, {
+  ITransactionItem,
+} from "@/Components/molecules/TransactionItem.vue";
 
 const data: ITransactionItem[] = [
   {

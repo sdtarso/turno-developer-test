@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Container from "@/Components/Container.vue";
-import Stack from "@/Components/Stack.vue";
+import Container from "@/Components/atoms/Container.vue";
+import Stack from "@/Components/atoms/Stack.vue";
 import { currencyFormatter } from "@/utils";
 import { computed } from "vue";
 

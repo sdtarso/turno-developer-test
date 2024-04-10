@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Container from "@/Components/Container.vue";
+import Container from "@/Components/atoms/Container.vue";
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import Container from "@/Components/Container.vue";
       <header class="bg-primary-400" v-if="$slots.header">
         <Container class="grid grid-cols-header py-6">
           <div>
-            <VIcon class="w-6 h-6" name="fa-bars" />
+            <VIcon class="text-white w-6 h-6" name="fa-bars" />
           </div>
           <slot name="header" />
           <slot name="filter" />
