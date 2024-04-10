@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3";
+import { computed } from "vue";
 
 export interface IDrawerLink {
   icon: string;
@@ -20,12 +21,12 @@ const items: IDrawerLink[] = [
   {
     icon: "fa-level-down-alt",
     label: "expenses",
-    link: "#expenses",
+    link: route("expenses"),
   },
   {
     icon: "fa-money-check-alt",
     label: "checks",
-    link: "#checks",
+    link: route("checks"),
   },
   {
     icon: "fa-bell",
@@ -61,7 +62,8 @@ const emit = defineEmits(["close"]);
           className="block w-full"
         >
           <Link
-            class="flex items-center p-4 gap-4 transition-colors hover:bg-black/25"
+            class="flex items-center p-4 gap-4 border-solid border-l-4 border-transparent transition-colors hover:bg-black/25"
+            :class="{ '!border-primary-400': link.endsWith($page.url) }"
             :href="link"
             @click="emit('close')"
           >

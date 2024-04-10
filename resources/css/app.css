@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 body {
   color: #2799fb;

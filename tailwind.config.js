@@ -1,3 +1,4 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 
 /** @type {import('tailwindcss').Config} */
@@ -11,6 +12,9 @@ export default {
 
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Roboto", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         light: "#f1f9fe",
         red: {
@@ -23,8 +27,8 @@ export default {
         },
       },
       gridTemplateColumns: {
-        header: "24px 1fr 24px"
-      }
+        header: "24px 1fr 24px",
+      },
     },
   },
 

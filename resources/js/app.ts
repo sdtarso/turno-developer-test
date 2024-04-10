@@ -21,10 +21,15 @@ import {
   FaGithub,
   FaExternalLinkAlt,
   FaExternalLinkSquareAlt,
+  FaPlus,
+  FaMoneyBillWave,
+  BiCalendarWeek,
+  BiStarFill,
 } from "oh-vue-icons/icons";
 
 addIcons(
   CoPlus,
+  FaPlus,
   FaChevronDown,
   FaBars,
   FaBalanceScaleRight,
@@ -37,7 +42,10 @@ addIcons(
   FaQuestionCircle,
   FaGithub,
   FaExternalLinkAlt,
-  FaExternalLinkSquareAlt
+  FaExternalLinkSquareAlt,
+  FaMoneyBillWave,
+  BiCalendarWeek,
+  BiStarFill
 );
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";

@@ -28,6 +28,10 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/', fn () => Inertia::render('Dashboard'))->name('home');
+    Route::get('/expenses', fn () => Inertia::render('Expenses'))->name('expenses');
+    Route::get('/add-purchase', fn () => Inertia::render('NewExpense'))->name('expenses.create');
+    Route::get('/checks', fn () => Inertia::render('Checks'))->name('checks');
+    Route::get('/deposit-check', fn () => Inertia::render('NewCheck'))->name('checks.create');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
