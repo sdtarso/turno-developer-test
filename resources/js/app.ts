@@ -18,6 +18,9 @@ import {
   FaUserAlt,
   FaCog,
   FaQuestionCircle,
+  FaGithub,
+  FaExternalLinkAlt,
+  FaExternalLinkSquareAlt,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -31,7 +34,10 @@ addIcons(
   FaBell,
   FaUserAlt,
   FaCog,
-  FaQuestionCircle
+  FaQuestionCircle,
+  FaGithub,
+  FaExternalLinkAlt,
+  FaExternalLinkSquareAlt
 );
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";

@@ -53,12 +53,12 @@ const emit = defineEmits(["close"]);
 
 <template>
   <div className="flex-grow bg-primary">
-    <nav>
-      <ul className="flex flex-col">
+    <nav class="h-full">
+      <ul className="h-full flex flex-col">
         <li
           :key="key"
           v-for="({ icon, link, label }, key) in items"
-          className="block w-full font-medium"
+          className="block w-full"
         >
           <Link
             class="flex items-center p-4 gap-4 transition-colors hover:bg-black/25"
@@ -70,6 +70,21 @@ const emit = defineEmits(["close"]);
               {{ label }}
             </span>
           </Link>
+        </li>
+        <li className="block w-full mt-auto">
+          <a
+            class="flex items-center p-4 gap-4 transition-colors hover:bg-black/25"
+            href="https://github.com/sdtarso/turno-developer-test"
+            target="_blank"
+          >
+            <VIcon class="w-7 h-7 text-primary-400" name="fa-github" />
+            <span
+              class="inline-flex items-center gap-1 text-white font-bold uppercase text-xs"
+            >
+              View on github
+              <VIcon name="fa-external-link-alt" />
+            </span>
+          </a>
         </li>
       </ul>
     </nav>
